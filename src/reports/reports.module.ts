@@ -5,10 +5,12 @@ import { BullModule } from '@nestjs/bull';
 import { ReportsJobService } from './reports-job/reports-job.service';
 
 @Module({
-  imports: [BullModule.registerQueue({
-    name: 'reports',
-  })],
+  imports: [
+    BullModule.registerQueue({
+      name: 'reports',
+    }),
+  ],
   providers: [ReportsService, ReportsJobService],
-  controllers: [ReportsController]
+  controllers: [ReportsController],
 })
 export class ReportsModule {}

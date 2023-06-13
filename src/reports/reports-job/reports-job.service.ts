@@ -4,12 +4,12 @@ import { Job } from 'bull';
 
 @Processor('reports')
 export class ReportsJobService {
+  constructor(private reportsService: ReportsService) {}
 
-    constructor(private reportsService: ReportsService) {}
-
-    @Process()
-    async produce(job: Job<{ reportId: number }>) {
-        await this.reportsService.produce(job.data.reportId)
-        return {}
-    }
+  @Process()
+  async produce(job: Job<{ reportId: number }>) {
+    console.log('Producing report');
+    await this.reportsService.produce(job.data.reportId);
+    return {};
+  }
 }

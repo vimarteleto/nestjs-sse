@@ -27,13 +27,13 @@
 
     let countEventSources = 0;
 
-    async function createReport() {
-      if(countEventSources === 6 ) {
+    async function createReport(){
+      if(countEventSources === 6 ){
           alert('Limite de relatórios atingido, aguarde a finalização de algum relatório para criar um novo.');
           return;
       }
       countEventSources++;
-
+      
       const res = await fetch('/reports', {
         method: 'POST',
         headers: {
@@ -72,7 +72,7 @@
         }
 
       }
-
+      
     }
   </script>
 </html>

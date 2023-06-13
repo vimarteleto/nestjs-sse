@@ -6,3 +6,5 @@ export class AppService {
     return 'Hello World!';
   }
 }
+
+//CoC = Convention over Configuration

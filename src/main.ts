@@ -5,8 +5,8 @@ import { join } from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.setBaseViewsDir(join(__dirname, '..', 'html'))
-  app.setViewEngine('hbs')
+  app.setBaseViewsDir(join(__dirname, '..', 'html'));
+  app.setViewEngine('hbs');
   await app.listen(3000);
 }
 bootstrap();

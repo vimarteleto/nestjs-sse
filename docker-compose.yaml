@@ -11,8 +11,8 @@ services:
   mysql:
     image: mysql:8.0.30-debian
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=nest
-
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nest
+  
   redis:
-    image: redis:7.0.8-alpine
+    image: redis:7.0.8-alpine 
